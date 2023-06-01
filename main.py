@@ -21,7 +21,7 @@ PRIMARY KEY(year, author_name)
 );
 """
 
-# createt the table
+# create the table
 session.execute(query)
 
 query = """
@@ -37,7 +37,12 @@ results = session.execute("SELECT * FROM books WHERE year=2023")
 for result in results:
   print(result.year, result.author_name, result.title)
 
-  
+# clean up   
+
+session.execute("""
+DROP KEYSPACE book_shelf;
+""")
+
 session.shutdown()
 cluster.shutdown()    
 
