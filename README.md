@@ -11,4 +11,6 @@ in the dir with the docker-compose.yml file:
 this will load the container in detached mode. 
 
 
+Install the requirements.txt for cassandra-driver 
+
 You can then run the example python 
