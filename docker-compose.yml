@@ -1,1 +1,13 @@
+version: '2'
 
+services:
+  cassandra:
+    container_name: cassandra
+    image: cassandra:latest
+    ports:
+      - 9042:9042
+    environment:
+      - CASSANDRA_START_RPC=true
+      - CASSANDRA_CLUSTER_NAME=MyCluster
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - CASSANDRA_DC=datacenter
