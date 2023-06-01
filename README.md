@@ -10,3 +10,5 @@ in the dir with the docker-compose.yml file:
 
 this will load the container in detached mode. 
 
+
+You can then run the example python 
